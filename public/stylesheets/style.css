@@ -9,7 +9,7 @@ a {
   color: white;
 }
 
-@keyframes slideInFromLeft {
+@keyframes slideInFromTop {
   0% {
     transform: translateY(-100%);
   }
@@ -18,10 +18,19 @@ a {
   }
 }
 
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 #nav {
   background-color: rgb(17, 17, 17);
   height: 12vh;
-  animation: 0.75s ease-out 0s 1 slideInFromLeft;
+  animation: 0.75s ease-out 0s 1 slideInFromTop;
 }
 
 .links {
@@ -86,104 +95,6 @@ a {
   );
   color: #fff;
   text-align: center;
-}
-
-.vignette {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  box-shadow: inset 0px 0px 150px 20px black;
-  mix-blend-mode: multiply;
-  -webkit-animation: vignette-anim 3s infinite; /* Safari 4+ */
-  -moz-animation: vignette-anim 3s infinite; /* Fx 5+ */
-  -o-animation: vignette-anim 3s infinite; /* Opera 12+ */
-  animation: vignette-anim 3s infinite; /* IE 10+, Fx 29+ */
-}
-
-.noise {
-  z-index: 100;
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  width: 100%;
-  height: 100%;
-
-  pointer-events: none;
-  opacity: 0.15;
-}
-
-.line {
-  position: absolute;
-  height: 100%;
-  width: 1px;
-  opacity: 0.1;
-  background-color: #000;
-}
-
-.titleCont {
-  position: relative;
-}
-
-.main-title {
-  padding: 0.3em 1em 0.25em;
-  font-weight: 400;
-  font-size: 40px;
-  color: white;
-  font-family: "Bellefair", serif;
-  position: relative;
-  line-height: 1.3;
-}
-
-.overTitle {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.dot {
-  width: 3px;
-  height: 2px;
-  background-color: white;
-  position: absolute;
-  opacity: 0.3;
-}
-
-@-webkit-keyframes vignette-anim {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.7;
-  }
-}
-@-moz-keyframes vignette-anim {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.7;
-  }
-}
-@-o-keyframes vignette-anim {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.7;
-  }
-}
-@keyframes vignette-anim {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.7;
-  }
 }
 
 #landing-page {
@@ -258,8 +169,8 @@ a {
   font-weight: 700;
   background: linear-gradient(
     to right,
-    rgb(89, 139, 186) 10%,
-    rgb(61, 105, 148) 20%,
+    rgb(89, 139, 186) 40%,
+    rgb(61, 105, 148) 30%,
     rgb(253, 232, 133) 60%,
     rgb(250, 212, 91) 40%
   );
@@ -276,25 +187,24 @@ a {
 }
 
 .welcome:hover > a > #to-home {
-  border-color: white;
-  color: white;
   cursor: pointer;
 }
 
 #to-home {
   padding: 12px;
-  border-radius: 5px;
   height: 8vh;
   width: 13vw;
   font-size: 20px;
   background-color: rgba(0, 0, 0, 0);
-  border: 3px solid gray;
   color: gray;
 }
 
 #to-home:hover {
-  background: rgb(230, 195, 106);
+  border-color: rgb(223, 178, 64);
+  transform: scale(1.25);
+  border-radius: 5px;
   transition: 0.75s;
+  color: rgb(223, 178, 64);
 }
 
 @keyframes textclip {
