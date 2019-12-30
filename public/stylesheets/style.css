@@ -1,7 +1,7 @@
 body {
   font: 14px "Roboto mono", Helvetica, Arial, sans-serif;
   font-size: 18px;
-  color: black;
+  color: white;
   background: black;
 }
 
@@ -12,6 +12,10 @@ a {
 i {
   color: rgb(198, 198, 198);
   transition: 0.75s;
+}
+
+nav {
+  border-bottom: 2px solid #00fff5;
 }
 
 @keyframes slideInFromTop {
@@ -41,14 +45,26 @@ i {
     color: rgb(198, 198, 198);
   }
   50% {
-    transform: scaleY(5);
-    transform: scaleX(1.2);
+    transform: scaleY(3);
+    transform: scaleX(1.1);
     color: white;
   }
   100% {
     transform: scaleY(1);
     transform: scaleX(1);
     color: rgb(198, 198, 198);
+  }
+}
+
+@keyframes bop_skills {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 
@@ -243,7 +259,7 @@ i {
 
 #hero {
   margin-top: 12vh;
-  height: 50vh;
+  height: 88vh;
   display: flex;
   background: white;
 }
@@ -252,14 +268,65 @@ i {
   width: 18vw;
   height: 36vh;
   border-radius: 50%;
-  border: none;
-  margin-top: 8vh;
+  border: 3px solid #00fff5;
+  margin-top: 5vh;
 }
 
-#hero-stuff {
+#skills-container {
+  display: inline-flex;
+  flex-direction: row;
+  padding: 10px;
+  width: 100%;
+  height: 25vh;
+  color: #00fff5;
+  margin-top: 14vh;
+  justify-content: space-around;
+}
+
+#skills-container2 {
+  display: inline-flex;
+  flex-direction: row;
+  padding: 10px;
+  width: 100%;
+  height: 25vh;
+  color: #00fff5;
+  justify-content: center;
+  align-items: center;
+}
+
+.Skills-logos {
+  width: 5vw;
+  height: 8vh;
+}
+
+.skill:hover {
+  transform: scale(1.5);
+  transition: 0.75s ease-in;
+}
+
+.skill {
+  height: 18vh;
+  width: 11vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  transition: 0.75s ease-out;
+}
+
+#python {
+  animation: slideInFromRight_python 3s ease-out;
+  transition: 0.75s ease-out;
+}
+
+#javascript {
+  animation: slideInFromRight_javascript 3.5s ease-out;
+  /* animation-delay: 1s; */
+}
+
+#skills {
   width: 50%;
   height: 100%;
-  padding: 25px;
   border: 2px solid white;
   animation: slideInFromRight 1.5s;
 }
@@ -267,21 +334,109 @@ i {
 .description {
   display: flex;
   width: 50%;
-  border: 2px solid white;
+  /* border: 2px solid white; */
   height: 100%;
   padding: 15px 0 0 50px;
   animation: slideInFromLeft 1.5s;
 }
 
+#hero-description {
+  width: 30vw;
+  height: 50%;
+  text-align: center;
+}
+
+#hero-description h1 {
+  margin-top: 22vh;
+  font-size: 45px;
+}
+
+#projects {
+  width: 100%;
+  height: 50vh;
+}
+
+#projects > h1::before {
+  content: "";
+  width: 40px;
+}
+
 .main {
   width: 100%;
-  height: 85vh;
+  height: 100%;
   border: 2px solid black;
   display: flex;
   background: black;
+  position: relative;
 }
 
 @keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInFromRight_python {
+  0% {
+    transform: translateX(1000%);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInFromRight_javascript {
+  0% {
+    transform: translateX(900%);
+  }
+  50% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInFromRight_nodejs {
+  0% {
+    transform: translateX(800%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInFromRight_react {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInFromRight_Django {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInFromRight_postgres {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInFromRight_mongodb {
   0% {
     transform: translateX(100%);
   }
@@ -294,63 +449,5 @@ i {
 @keyframes textclip {
   to {
     background-position: 200% center;
-  }
-}
-
-#star-wars-body {
-  width: 100%;
-  height: 100%;
-  background: black;
-  overflow: hidden;
-}
-
-.fade {
-  position: relative;
-  width: 100%;
-  min-height: 60vh;
-  top: -25px;
-  z-index: 1;
-}
-
-.star-wars {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  height: 800px;
-  color: #feda4a;
-  font-family: "Pathway Gothic One", sans-serif;
-  font-size: 500%;
-  font-weight: 600;
-  letter-spacing: 6px;
-  line-height: 150%;
-  perspective: 400px;
-  text-align: justify;
-}
-
-.crawl {
-  position: relative;
-  top: 9999px;
-  transform-origin: 50% 100%;
-  animation: crawl 60s linear;
-}
-
-.crawl > .title {
-  font-size: 90%;
-  text-align: center;
-}
-
-.crawl > .title h1 {
-  margin: 0 0 100px;
-  text-transform: uppercase;
-}
-
-@keyframes crawl {
-  0% {
-    top: 0;
-    transform: rotateX(20deg) translateZ(0);
-  }
-  100% {
-    top: -6000px;
-    transform: rotateX(25deg) translateZ(-2500px);
   }
 }
