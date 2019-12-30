@@ -1,0 +1,24 @@
+<%- include('./partials/header.ejs') %>
+<head>
+  <script type="text/JavaScript" src="/javascripts/typed.js"></script>
+</head>
+<body>
+  <div style="margin-top: 20vh">
+    <h1>This is the about page</h1>
+    <div id="typed-strings" style="margin-top: 120vh;">
+      <p>
+        Hello there! My Name is
+        <strong><span style="color: #00fff5">Tyler Villa</span></strong>
+      </p>
+    </div>
+    <span id="typed"></span>
+  </div>
+  <script type="text/javascript">
+    var typed = new Typed("#typed", {
+      stringsElement: "#typed-strings",
+      typeSpeed: 50,
+      backSpeed: 20,
+      smartBackspace: true
+    });
+  </script>
+</body>
