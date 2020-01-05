@@ -1,0 +1,526 @@
+/*--- Direct Element Changes ---*/
+
+body {
+  font: 14px "Roboto mono", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  color: white;
+  background: black;
+}
+
+a {
+  color: white;
+}
+
+i {
+  color: rgb(198, 198, 198);
+  transition: 0.75s;
+}
+nav {
+  border-bottom: 2px solid #00adb5;
+}
+
+/*--- Navbar/Header ---*/
+
+#nav {
+  background-color: rgb(17, 17, 17);
+  height: 12vh;
+  animation: 0.75s ease-out 0s 1 slideInFromTop;
+}
+
+#div-url-links {
+  margin-right: 50px;
+}
+
+#div-url-links > .div-url-links:hover {
+  transition: 0.5s;
+  animation: bop_links 1s linear infinite;
+}
+
+#logo {
+  width: 4.5vw;
+  height: 8vh;
+  border-radius: 50%;
+}
+
+#GA-logo {
+  width: 3vw;
+  height: 6vh;
+  margin-top: -4px;
+}
+
+.links {
+  margin: 0 10px;
+  color: rgb(199, 199, 199);
+}
+
+.url-links {
+  margin: 0 10px;
+  color: rgb(198, 198, 198);
+}
+
+.url-links:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.links:hover {
+  color: white;
+  transition: 0.5s;
+  animation: bop_links 1s linear infinite;
+}
+
+.div-url-links {
+  display: flex;
+  flex-direction: column;
+}
+
+/*--- Main content ---*/
+
+#hero {
+  margin-top: 12vh;
+  height: 88vh;
+  display: flex;
+  background: white;
+}
+
+#hero-img {
+  width: 18vw;
+  height: 36vh;
+  border-radius: 50%;
+  border: 3px solid #00adb5;
+  margin-top: 5vh;
+}
+
+#skills-container {
+  display: inline-flex;
+  flex-direction: row;
+  padding: 10px;
+  width: 100%;
+  height: 25vh;
+  color: white;
+  margin-top: 5vh;
+  justify-content: space-around;
+}
+
+#skills-container2 {
+  display: inline-flex;
+  flex-direction: row;
+  padding: 10px;
+  width: 100%;
+  height: 25vh;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+#python {
+  animation: slideInFromRight_python 3s ease-out;
+  transition: 0.75s ease-out;
+}
+
+#python > h3 {
+  color: #fff;
+  font-weight: 700;
+  background: linear-gradient(
+    to right,
+    rgb(89, 139, 186) 40%,
+    rgb(61, 105, 148) 30%,
+    rgb(253, 232, 133) 60%,
+    rgb(250, 212, 91) 40%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 1.5s linear infinite;
+  display: inline-block;
+}
+
+#javascript {
+  animation: slideInFromRight_javascript 3.5s ease-out;
+}
+
+#javascript > h3 {
+  color: #fff;
+  font-weight: 700;
+  background: linear-gradient(
+    to right,
+    rgb(238, 218, 104) 50%,
+    rgb(50, 51, 48) 50%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 1.5s linear infinite;
+  display: inline-block;
+}
+
+#nodejs {
+  animation: slideInFromRight_nodejs 4s ease-out;
+}
+
+#nodejs > h3 {
+  color: #fff;
+  font-weight: 700;
+  background: linear-gradient(
+    to right,
+    rgb(63, 203, 28) 50%,
+    rgb(117, 158, 105) 20%,
+    rgb(50, 51, 48) 30%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 1.5s linear infinite;
+  display: inline-block;
+}
+
+#react {
+  animation: slideInFromRight_react 3s ease-out;
+  animation-delay: 0.75s;
+}
+
+#react > h3 {
+  color: #fff;
+  font-weight: 700;
+  background: linear-gradient(
+    to right,
+    rgb(116, 198, 225) 50%,
+    rgb(50, 51, 48) 30%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 1.5s linear infinite;
+  display: inline-block;
+}
+
+#django {
+  animation: slideInFromRight_django 3s ease-out;
+}
+
+#django > h3 {
+  color: #fff;
+  font-weight: 700;
+  background: linear-gradient(
+    to right,
+    rgb(84, 166, 123) 60%,
+    rgb(50, 51, 48) 30%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 1.5s linear infinite;
+  display: inline-block;
+}
+
+#mongodb {
+  animation: slideInFromRight_mongodb 3.5s ease-out;
+}
+
+#mongodb > h3 {
+  color: #fff;
+  font-weight: 900;
+  background: linear-gradient(
+    to right,
+    rgb(106, 176, 78) 60%,
+    rgb(91, 157, 70) 40%,
+    rgb(200, 199, 185) 40%,
+    rgb(63, 62, 66) 40%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 1.5s linear infinite;
+  display: inline-block;
+}
+
+#postgres {
+  animation: slideInFromRight_postgres 4s ease-out;
+}
+
+#postgres > h3 {
+  color: #fff;
+  font-weight: 900;
+  background: linear-gradient(
+    to right,
+    rgb(62, 103, 142) 50%,
+    rgb(143, 143, 143) 50%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 1.5s linear infinite;
+  display: inline-block;
+}
+
+#skills {
+  width: 50%;
+  height: 100%;
+  animation: slideInFromRight 1.5s;
+}
+
+.typed-fade-out {
+  visibility: hidden;
+}
+
+#to-portfolio {
+  border: 2px solid #00adb5;
+  width: 12vw;
+  height: 8vh;
+  color: #00adb5;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0);
+  transition: 0.75s ease-out;
+  animation: slideInFromRight_python 3s ease-out;
+}
+
+#to-portfolio:hover {
+  transform: scale(1.25);
+  transition: 0.75s ease-in;
+}
+
+#hero-description {
+  width: 30vw;
+  height: 50%;
+  text-align: center;
+}
+
+#hero-description h1 {
+  margin-top: 22vh;
+  font-size: 45px;
+}
+
+#projects {
+  width: 100%;
+  height: 50vh;
+}
+
+#projects > h1::before {
+  content: "";
+  width: 40px;
+}
+
+.Skills-logos {
+  width: 5vw;
+  height: 8vh;
+}
+
+.skill:hover {
+  transform: scale(1.5);
+  transition: 0.75s ease-in;
+}
+
+.skill {
+  height: 18vh;
+  width: 11vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  transition: 0.75s ease-out;
+}
+
+.description {
+  display: flex;
+  width: 50%;
+  height: 100%;
+  padding: 15px 0 0 50px;
+  animation: slideInFromLeft 1.5s;
+}
+.main {
+  width: 100%;
+  height: 100%;
+  border: 2px solid black;
+  display: flex;
+  background: black;
+  position: relative;
+}
+
+/*--- Animations ---*/
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes bop_links {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes stretch {
+  0% {
+    transform: scaleX(1.5);
+  }
+  25% {
+    transform: scaleX(2);
+  }
+
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInFromRight_python {
+  0% {
+    transform: translateX(1000%);
+  }
+  50% {
+    transform: translateX(-25%);
+  }
+  75% {
+    transform: translateX(5%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInFromRight_javascript {
+  0% {
+    transform: translateX(900%);
+  }
+  50% {
+    transform: translateX(-25%);
+  }
+  75% {
+    transform: translateX(5%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInFromRight_nodejs {
+  0% {
+    transform: translateX(800%);
+  }
+  50% {
+    transform: translateX(-25%);
+  }
+  75% {
+    transform: translateX(5%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInFromRight_react {
+  0% {
+    transform: translateX(100%);
+  }
+  50% {
+    transform: translateX(-25%);
+  }
+  75% {
+    transform: translateX(5%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInFromRight_django {
+  0% {
+    transform: translateX(1000%);
+  }
+  50% {
+    transform: translateX(-25%);
+  }
+  75% {
+    transform: translateX(5%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInFromRight_mongodb {
+  0% {
+    transform: translateX(900%);
+  }
+  50% {
+    transform: translateX(-25%);
+  }
+  75% {
+    transform: translateX(5%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight_postgres {
+  0% {
+    transform: translateX(800%);
+  }
+  50% {
+    transform: translateX(-25%);
+  }
+  75% {
+    transform: translateX(5%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
