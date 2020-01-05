@@ -1,0 +1,137 @@
+/*--- Direct Element Changes ---*/
+
+body {
+  font: 14px "Roboto mono", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  color: white;
+  background: black;
+}
+
+/*--- Main Content ---*/
+
+#landing-page {
+  background-color: black;
+  position: fixed;
+  margin-left: -4vw;
+  margin-top: -5vh;
+}
+
+.welcome {
+  position: absolute;
+  width: 40vw;
+  left: 34%;
+  top: 30%;
+  background-color: rgba(60, 60, 60, 0);
+  text-align: center;
+  padding: 10px;
+  color: gray;
+  transition: transform 1s ease;
+}
+
+.welcome:hover {
+  color: White;
+  transition: 1s;
+  transform: scale(1.5);
+}
+
+.welcome:hover > #welcome-header > #Name {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 700;
+  background: linear-gradient(
+    to right,
+    green 10%,
+    white 40%,
+    white 40%,
+    red 60%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 1.5s linear infinite;
+  display: inline-block;
+}
+
+.welcome:hover > #welcome-header > #js {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 700;
+  background: linear-gradient(
+    to right,
+    rgb(238, 218, 104) 50%,
+    rgb(50, 51, 48) 50%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 1.5s linear infinite;
+  display: inline-block;
+}
+.welcome:hover > #welcome-header > #python {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 700;
+  background: linear-gradient(
+    to right,
+    rgb(89, 139, 186) 40%,
+    rgb(61, 105, 148) 30%,
+    rgb(253, 232, 133) 60%,
+    rgb(250, 212, 91) 40%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 1.5s linear infinite;
+  display: inline-block;
+}
+
+.welcome:hover > a > #to-home {
+  cursor: pointer;
+  visibility: visible;
+  animation: slideInFromLeft 1s;
+}
+
+#to-home {
+  padding: 12px;
+  height: 8vh;
+  width: 13vw;
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0);
+  color: gray;
+  visibility: hidden;
+  transition: 0.75s ease;
+}
+
+#to-home:hover {
+  border-color: rgb(223, 178, 64);
+  transform: scale(1.25);
+  border-radius: 5px;
+  transition: 0.75s;
+  color: rgb(223, 178, 64);
+}
+
+#to-home:hover > i {
+  color: rgb(223, 178, 64);
+  transition: 0.75s;
+}
+
+/*--- Keyframes ---*/
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
