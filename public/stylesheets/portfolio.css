@@ -1,0 +1,362 @@
+body {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.container-portfolio {
+  position: relative;
+  margin-top: 18vh;
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 0.5fr));
+  grid-template-rows: auto;
+  grid-gap: 0 40px;
+}
+
+.container-portfolio .box {
+  position: relative;
+  height: 400px;
+  background: #060c21;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  transition: 0.75s ease-out;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.container-portfolio .box:hover:before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: #00adb5;
+  animation: skew 2s;
+  animation-fill-mode: forwards;
+  z-index: -1;
+}
+
+.container-portfolio .box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(74, 171, 179, 0.05);
+}
+
+.content {
+  position: relative;
+  padding: 20px;
+  margin: 8vw 0 0 0;
+}
+
+.content h2 {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  color: rgba(255, 255, 255, 0.05);
+  transition: 0.5s ease-out;
+}
+
+.box:hover .content h2 {
+  top: -120px;
+  transition: 0.5s ease-in-out;
+}
+
+.content h1 {
+  padding: 0;
+  font-size: 40px;
+  font-weight: 500;
+  text-align: center;
+  color: white;
+  animation: slideLeftBackwards 1s;
+  animation-fill-mode: backwards;
+}
+
+.content p {
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-size: 16px;
+  transition: 0.5s;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-40px);
+}
+
+.box:hover .content p {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.box:hover .content h1 {
+  animation: slideLeft 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.content a {
+  position: relative;
+  margin: 10px 0 0 0;
+  padding: 10px 20px;
+  text-decoration: none;
+  border: 1px solid white;
+  display: inline-block;
+  color: white;
+  transition: 0.5s;
+  transform: translateY(-40px);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.box:hover .content a {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.content a:hover {
+  color: black;
+  background: white;
+}
+
+#tasty::before {
+  background: linear-gradient(315deg, #ff0057, #e64a19);
+}
+
+#tasty:hover h1 {
+  animation: slideLeft 1s;
+  animation-fill-mode: forwards;
+  color: #e64a19;
+}
+
+#westream:hover h1 {
+  animation: slideLeftWeStream 1s;
+  animation-fill-mode: forwards;
+  color: #e91e63;
+}
+
+#node-master:hover h1 {
+  animation: slideLeftNode 1s;
+  animation-fill-mode: forwards;
+  color: #ffc107;
+}
+
+#django-blog:hover h1 {
+  animation: slideLeftDjango 1s;
+  animation-fill-mode: forwards;
+  color: #89ff00;
+}
+
+#pokedex:hover h1 {
+  animation: slideLeftPokedex 1s;
+  animation-fill-mode: forwards;
+  color: #ffcb05;
+}
+
+#westream h1 {
+  animation: slideLeftBackwardsWeStream 1s;
+}
+
+#node-master h1 {
+  animation: slideLeftBackwards 1s;
+}
+
+#pokedex h1 {
+  animation: slideLeftBackwardsPokedex 1s;
+}
+
+#django-blog h1 {
+  animation: slideLeftBackwardsDjango 1s;
+}
+
+#westream::before {
+  background: linear-gradient(315deg, #e91e63, #5d02ff);
+}
+
+#pokedex::before {
+  background: linear-gradient(315deg, #ffcb05, #3d7dca);
+}
+
+#django-blog::before {
+  background: linear-gradient(315deg, #89ff00, #00bcd4);
+}
+
+#node-master::before {
+  background: linear-gradient(315deg, #ff0000, #ffc107);
+}
+
+.tech-list-item {
+  list-style: none;
+  font-size: 22px;
+  display: flex;
+  margin: 10px;
+}
+
+.tech-img {
+  width: 3vw;
+  height: 5vh;
+  align-self: center;
+  margin-top: -8px;
+  margin-right: 5px;
+}
+
+.tech-list {
+  transition: 0.5s;
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  bottom: -5%;
+  left: -10%;
+}
+
+.project-cover {
+  width: 106%;
+  height: 220px;
+  transition: 1.5s;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(50px);
+  margin-left: -18px;
+  border-radius: 5px;
+}
+
+.box:hover .project-cover {
+  visibility: visible;
+  opacity: 0.3;
+  transform: translateY(-2px);
+  transition: 1.5s;
+}
+
+.tech-list li:nth-child(3) {
+  margin-left: 40px;
+}
+
+#tasty .tech-list {
+  bottom: 15%;
+}
+
+#node-master .tech-list {
+  bottom: 15%;
+}
+
+#pokedex .tech-list {
+  display: flex;
+  flex-wrap: nowrap;
+  bottom: 15%;
+  left: -15%;
+}
+
+#django-blog .tech-list {
+  bottom: 15%;
+}
+
+.box:hover .tech-list {
+  opacity: 0;
+  transform: translateY(40px);
+  visibility: hidden;
+}
+
+@keyframes skew {
+  0% {
+    transform: skew(0deg);
+  }
+  100% {
+    transform: skew(1.5deg, 1.5deg);
+  }
+}
+
+@keyframes skewBack {
+  0% {
+    transform: skew(1.5deg, 1.5deg);
+  }
+  100% {
+    transform: skew(0deg);
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-85px);
+  }
+}
+@keyframes slideLeftWeStream {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-35px);
+  }
+}
+@keyframes slideLeftDjango {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-20px);
+  }
+}
+@keyframes slideLeftPokedex {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50px);
+  }
+}
+@keyframes slideLeftNode {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-75px);
+  }
+}
+
+@keyframes slideLeftBackwards {
+  0% {
+    transform: translateX(-85px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideLeftBackwardsWeStream {
+  0% {
+    transform: translateX(-35px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideLeftBackwardsDjango {
+  0% {
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideLeftBackwardsPokedex {
+  0% {
+    transform: translateX(-50px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
