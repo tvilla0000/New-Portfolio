@@ -1,4 +1,36 @@
 <%- include('./partials/header.ejs') %>
-<body id="portfolio-body">
-  <div></div>
+<head>
+  <link rel="stylesheet" href="/stylesheets/portfolio.css" />
+  <script
+    type="text/javascript"
+    rel="javascript"
+    src="/javascripts/projects.js"
+  ></script>
+</head>
+<body>
+  <div class="container-portfolio">
+    <% projects.forEach(function(p) { %>
+
+    <div class="box" id="<%= p.id %>">
+      <div class="content">
+        <h2><img class="project-cover" src="<%= p.imgUrl %>" /></h2>
+        <h1 id="<%= p.id %>"><%= p.name %></h1>
+        <hr />
+        <p>
+          <%= p.description %>
+        </p>
+        <ul class="tech-list">
+          <% p.technology.forEach(function(t) { %>
+          <li class="tech-list-item">
+            <img class="tech-img" id="t.id" src="<%= t.techImgUrl%>" /><%=
+            t.name %>
+          </li>
+          <% }) %>
+        </ul>
+        <a href="/home/"> Read More </a>
+      </div>
+    </div>
+
+    <% }) %>
+  </div>
 </body>
