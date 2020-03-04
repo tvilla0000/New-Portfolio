@@ -16,7 +16,7 @@ i {
   transition: 0.75s;
 }
 nav {
-  border-bottom: 2px solid #00adb5;
+  border-bottom: 0.5px solid #00adb5;
 }
 
 /*--- Navbar/Header ---*/
@@ -51,6 +51,7 @@ nav {
 .links {
   margin: 0 10px;
   color: rgb(199, 199, 199);
+  color: #121212;
 }
 
 .url-links {
@@ -135,7 +136,7 @@ nav {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: textclip 1.5s linear infinite;
+  animation: textclip 2s linear infinite;
   display: inline-block;
 }
 
@@ -158,7 +159,7 @@ nav {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: textclip 1.5s linear infinite;
+  animation: textclip 2s linear infinite;
   display: inline-block;
 }
 
@@ -182,7 +183,7 @@ nav {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: textclip 1.5s linear infinite;
+  animation: textclip 2s linear infinite;
   display: inline-block;
 }
 
@@ -206,7 +207,7 @@ nav {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: textclip 1.5s linear infinite;
+  animation: textclip 2s linear infinite;
   display: inline-block;
 }
 
@@ -229,7 +230,7 @@ nav {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: textclip 1.5s linear infinite;
+  animation: textclip 2s linear infinite;
   display: inline-block;
 }
 
@@ -254,7 +255,7 @@ nav {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: textclip 1.5s linear infinite;
+  animation: textclip 2s linear infinite;
   display: inline-block;
 }
 
@@ -277,7 +278,7 @@ nav {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: textclip 1.5s linear infinite;
+  animation: textclip 2s linear infinite;
   display: inline-block;
 }
 
