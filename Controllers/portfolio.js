@@ -6,6 +6,9 @@ module.exports = {
 
 function index(req, res) {
   res.render("portfolio", {
-    projects: project.getAll()
+    projects: project.getAll(),
+    frontendProjects: project.getAllFrontend(),
+    backendProjects: project.getAllBackend(),
+    fullstackProjects: project.getAllFullstack()
   });
 }
