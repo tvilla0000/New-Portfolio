@@ -1,6 +1,7 @@
 body {
   padding: 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
@@ -8,18 +9,100 @@ body {
 
 .container-portfolio {
   position: relative;
-  margin-top: 18vh;
+  margin-top: 4vh;
   width: 90%;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 0.5fr));
   grid-template-rows: auto;
   grid-gap: 0 40px;
+  margin-bottom: 5vh;
 }
 
-.container-portfolio .box {
+.header-projects {
+  margin-top: 15vh;
+  height: 1px;
+  border-bottom: #00adb5 solid 1px;
+  margin-bottom: 20px;
+  width: 90%;
+}
+
+.header-frontend {
+  height: 1px;
+  border-bottom: #00adb5 solid 1px;
+  margin-bottom: 20px;
+  width: 90%;
+}
+
+.header-frontend h1 {
+  position: absolute;
+  top: 70.25vw;
+  left: 38%;
+  background: black;
+  width: 26vw;
+  text-align: center;
+  color: #00adb5;
+}
+
+.header-fullstack {
+  height: 1px;
+  border-bottom: #00adb5 solid 1px;
+  margin-bottom: 20px;
+  width: 90%;
+}
+
+.header-fullstack h1 {
+  position: absolute;
+  top: 141vw;
+  left: 38%;
+  background: black;
+  width: 26vw;
+  text-align: center;
+  color: #00adb5;
+}
+
+.header-backend {
+  height: 1px;
+  border-bottom: #00adb5 solid 1px;
+  margin-bottom: 20px;
+  width: 90%;
+}
+
+.header-backend h1 {
+  position: absolute;
+  top: 105.75vw;
+  left: 37.75%;
+  background: black;
+  width: 26vw;
+  text-align: center;
+  color: #00adb5;
+}
+
+.header-projects h1 {
+  position: absolute;
+  top: 85px;
+  text-align: center;
+  color: #00adb5;
+  left: 41%;
+  width: 18vw;
+  background: black;
+}
+
+.container-portfolio-frontend .box {
   position: relative;
   height: 400px;
   background: #060c21;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  transition: 0.75s ease-out;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+.container-portfolio .box {
+  position: relative;
+  height: 400px;
+  background: #0a0a0a;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,12 +133,13 @@ body {
   width: 50%;
   height: 100%;
   background: rgba(74, 171, 179, 0.05);
+  z-index: 0;
 }
 
 .content {
   position: relative;
   padding: 20px;
-  margin: 8vw 0 0 0;
+  margin: 4vw 0 0 0;
 }
 
 .content h2 {
@@ -103,14 +187,55 @@ body {
   animation-fill-mode: forwards;
 }
 
+.icons {
+  width: 8vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.icons a {
+  border-radius: 5px;
+  padding: 8px;
+  transition: 0.75s;
+}
+
+.icons a:hover {
+  background: white;
+  transition: 0.75s;
+}
+
+#westream .icons a:hover {
+  background: linear-gradient(315deg, #e91e63, #5d02ff);
+  border-color: black;
+}
+#tasty .icons a:hover {
+  background: linear-gradient(315deg, #ff0057, #e64a19);
+  border-color: black;
+}
+#pokedex .icons a:hover {
+  background: linear-gradient(315deg, #ffcb05, #3d7dca);
+  border-color: black;
+}
+#django-blog .icons a:hover {
+  background: linear-gradient(315deg, #89ff00, #00bcd4);
+  border-color: black;
+}
+#node-master .icons a:hover {
+  background: linear-gradient(315deg, #ff0000, #ffc107);
+  border-color: black;
+}
+
+.icons a:hover i {
+  color: black;
+}
+
 .content a {
   position: relative;
   margin: 10px 0 0 0;
-  padding: 10px 20px;
   text-decoration: none;
+  padding: 5px;
   border: 1px solid white;
   display: inline-block;
-  color: white;
   transition: 0.5s;
   transform: translateY(-40px);
   opacity: 0;
@@ -118,14 +243,10 @@ body {
 }
 
 .box:hover .content a {
-  transform: translateY(0);
+  transform: translateY(10px);
   opacity: 1;
   visibility: visible;
-}
-
-.content a:hover {
-  color: black;
-  background: white;
+  z-index: 1;
 }
 
 #tasty::before {
@@ -199,6 +320,7 @@ body {
   font-size: 22px;
   display: flex;
   margin: 10px;
+  font-size: 20px;
 }
 
 .tech-img {
@@ -235,16 +357,8 @@ body {
 .box:hover .project-cover {
   visibility: visible;
   opacity: 0.3;
-  transform: translateY(-2px);
+  transform: translateY(25px);
   transition: 1.5s;
-}
-
-.tech-list li:nth-child(3) {
-  margin-left: 40px;
-}
-
-#tasty .tech-list {
-  bottom: 15%;
 }
 
 #node-master .tech-list {
@@ -256,10 +370,6 @@ body {
   flex-wrap: nowrap;
   bottom: 15%;
   left: -15%;
-}
-
-#django-blog .tech-list {
-  bottom: 15%;
 }
 
 .box:hover .tech-list {
