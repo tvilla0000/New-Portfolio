@@ -1,1 +1,80 @@
 /*--- Direct Element Changes ---*/
+.main {
+  margin: 12vh 12.5% 0 12.5%;
+  height: 88vh;
+  width: 75%;
+  border: 2px solid white;
+}
+
+.poster {
+  border: 2px solid white;
+  height: 80%;
+  width: 100%;
+  display: flex;
+}
+
+.info {
+  border: 1px dotted white;
+  width: 50%;
+  padding: 40px 20px 0 20px;
+  animation: fadeInAndSlideRight 2s;
+}
+
+.info-header {
+  font-size: 70px;
+  font-weight: 800;
+  color: #04f2ff;
+}
+
+.intro {
+  font-size: 32px;
+  margin: 40px 0 0 0;
+  color: rgb(207, 207, 207);
+  font-weight: 200;
+}
+
+.abt-description {
+  font-size: 25px;
+  font-weight: 500;
+  margin-top: 35px;
+}
+
+.headshot-div {
+  width: 50%;
+}
+
+.color-span {
+  color: #04f2ff;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.headshot-div img {
+  width: 24vw;
+  height: 100%;
+  margin-left: 90px;
+  border-radius: 10px;
+  animation: fadeInAndSlideLeft 2s;
+}
+
+@keyframes fadeInAndSlideRight {
+  0% {
+    opacity: -1;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInAndSlideLeft {
+  0% {
+    opacity: -1;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
