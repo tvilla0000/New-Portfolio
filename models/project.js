@@ -1,18 +1,66 @@
-const projects = [
+let projects = [
   {
     name: "Tasty",
     id: "tasty",
-    type: "fullstack",
+    type: "Frontend & Backend",
     technology: [
       {
         name: "Django",
         techImgUrl:
-          "https://cdn.freebiesupply.com/logos/large/2x/django-logo-png-transparent.png"
+          "https://gitlab.com/uploads/-/system/project/avatar/3692106/django.png"
       },
       {
         name: "Python",
         techImgUrl:
           "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1024px-Python-logo-notext.svg.png"
+      },
+      {
+        name: "PostgreSQL",
+        techImgUrl:
+          "https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg"
+      }
+    ],
+    description:
+      "Tasty is a project that integrates the use of Django with Python to create an app alike to Yelp that implements class based views! ",
+    imgUrl: "https://i.imgur.com/yAn25C6.png"
+  },
+  {
+    name: "Supe API",
+    id: "supe",
+    type: "Frontend",
+    technology: [
+      {
+        name: "React",
+        techImgUrl: "http://maxehnert.com/app/images/react.svg"
+      },
+      {
+        name: "Javascript",
+        techImgUrl:
+          "https://www.geekstrick.com/wp-content/themes/geekstrick/assets/icons/javascript.svg"
+      }
+    ],
+    description:
+      "Tasty is a project that integrates the use of Django with Python to create an app alike to Yelp that implements class based views! ",
+    imgUrl: "https://i.imgur.com/yAn25C6.png"
+  },
+  {
+    name: "1920 Barbers",
+    id: "barbers",
+    type: "Frontend",
+    technology: [
+      {
+        name: "HTML",
+        techImgUrl:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/600px-HTML5_Badge.svg.png"
+      },
+      {
+        name: "CSS",
+        techImgUrl: "https://i.ya-webdesign.com/images/css-3-logo-png-7.png"
+      },
+      {
+        name: "Javascript",
+        techImgUrl:
+          "https://www.geekstrick.com/wp-content/themes/geekstrick/assets/icons/javascript.svg"
       }
     ],
     description:
@@ -22,7 +70,7 @@ const projects = [
   {
     name: "WeStream",
     id: "westream",
-    type: "fullstack",
+    type: "Fullstack",
     technology: [
       {
         name: "React",
@@ -46,21 +94,26 @@ const projects = [
   {
     name: "Django Blog",
     id: "django-blog",
-    type: "fullstack",
+    type: "Frontend & Backend",
     technology: [
       {
         name: "Django",
         techImgUrl:
-          "https://cdn.freebiesupply.com/logos/large/2x/django-logo-png-transparent.png"
+          "https://gitlab.com/uploads/-/system/project/avatar/3692106/django.png"
       },
       {
         name: "Python",
         techImgUrl:
           "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1024px-Python-logo-notext.svg.png"
+      },
+      {
+        name: "PostgreSQL",
+        techImgUrl:
+          "https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg"
       }
     ],
     description:
-      "This app was created as a project which allows users to creat a profile and create blog posts for others to see!",
+      "This app was created as a project which allows users to create a profile and create blog posts for others to see!",
     imgUrl: "https://i.ibb.co/Jc5KzCX/Screen-Shot-2020-01-18-at-10-50-21-PM.png"
   },
   {
@@ -80,7 +133,7 @@ const projects = [
       }
     ],
     description:
-      "Frontend project using React and Javascript meant to replicate a Pokedex that implements the use of type ahead text!",
+      "Frontend project using React and Javascript meant to replicate a Pokedex that implements the use of type ahead search!",
     imgUrl: "https://i.ibb.co/10nxq2Y/Screen-Shot-2020-01-18-at-10-38-23-PM.png"
   },
   {
@@ -94,15 +147,56 @@ const projects = [
       }
     ],
     description:
-      "Pure Node backend Application that logs out parsed requests to a server and parses data requests",
+      "Pure Node backend Application that logs out parsed requests to a server in the console and parses data requests!",
     imgUrl: ""
   }
 ];
 
-function getAll() {
+// Grab all projects and export them
+const getAll = () => {
   return projects;
-}
+};
+
+// Filter out projects based on type
+
+const isFrontend = projects.filter(x => {
+  return x.type === "Frontend" || x.type === "Frontend & Backend";
+});
+
+const isBackend = projects.filter(x => {
+  return x.type === "Backend" || x.type === "Frontend & Backend";
+});
+
+const isFullstack = projects.filter(x => {
+  return x.type === "Fullstack";
+});
+
+const recentProjects = projects.filter(x => {
+  return (
+    x.name === "WeStream" || x.name === "Supe API" || x.name === "1920 Barbers"
+  );
+});
+
+const getAllFrontend = () => {
+  return isFrontend;
+};
+
+const getAllBackend = () => {
+  return isBackend;
+};
+
+const getAllFullstack = () => {
+  return isFullstack;
+};
+
+const getRecent = () => {
+  return recentProjects;
+};
 
 module.exports = {
-  getAll
+  getAll,
+  getAllFrontend,
+  getAllBackend,
+  getAllFullstack,
+  getRecent
 };
