@@ -1,24 +1,30 @@
 <%- include('./partials/header.ejs') %>
 <head>
-  <script type="text/JavaScript" src="/javascripts/typed.js"></script>
+  <link rel="stylesheet" href="/stylesheets/About.css" />
 </head>
-<body>
-  <div style="margin-top: 20vh">
-    <h1>This is the about page</h1>
-    <div id="typed-strings" style="margin-top: 120vh;">
-      <p>
-        Hello there! My Name is
-        <strong><span style="color: #00fff5">Tyler Villa</span></strong>
+<div class="main">
+  <div class="poster">
+    <div class="info">
+      <h1 class="info-header">Who am I?</h1>
+      <h3 class="intro">
+        I am a <span>Software Engineer</span> based in breezy San Franciso,
+        California
+      </h3>
+      <p class="abt-description">
+        I am <span class="color-span">passionate</span> about creating
+        <span class="color-span">beautiful</span>
+        and <span class="color-span">intriguing UIs</span> as well as managing
+        <span class="color-span">clean</span>, elegant, and
+        <span class="color-span">efficient code</span>. I enjoy approaching
+        <span class="color-span">difficult challenges</span> head on and
+        preserving the <span class="color-span">experiences</span> that come
+        with them!
       </p>
+      <div class="medias"></div>
     </div>
-    <span id="typed"></span>
+    <div class="headshot-div">
+      <img src="https://i.imgur.com/4gIMd92.jpg" alt="" />
+    </div>
   </div>
-  <script type="text/javascript">
-    var typed = new Typed("#typed", {
-      stringsElement: "#typed-strings",
-      typeSpeed: 50,
-      backSpeed: 20,
-      smartBackspace: true
-    });
-  </script>
-</body>
+  <div class="abt-images"></div>
+</div>
