@@ -1,9 +1,9 @@
 <%- include('./partials/header.ejs') %>
 <head>
-
+<link rel="stylesheet" href="/stylesheets/portfolio.css">
 </head>
   <body>
-    <div  id="hero">
+
       <div class="main">
         <div class="description">
           <div style="height: 50%">
@@ -15,15 +15,11 @@
                 <div id="typed-strings" style="font-size: 100px; text-align: left;"> 
                   <p>
                     <span style="font-size: 5vh;">Hello there! My Name is</span>
-                    <strong style="color: #00adb5; font-size: 5vh;">Tyler Villa</strong><span style="font-size: 5vh;">.</span><br>
-                    <span style="font-size: 5vh;text-align: left;">I enjoy taking on complex problems     <br>and finding creative ways to solve <br>them. ^800 
-                    </p>
-                    <p><span style="font-size: 5vh;">^1000 I am <strong style="color:#00adb5">passionate</strong> about creating beautiful <br>and intriguing UIs as well as managing <br>clean, elegant, and efficient code.</span> </p>
-                    <p>
-                      <span style="font-size: 8vh;">^1000 I am a^80 <strong style="color: #00adb5;"> Creator</strong>.</span>
-                    </p>
-                    <p><span style="font-size: 8vh;">^1000I am a^80 <strong style="color: #00adb5;">Code Enthusiast</strong>.</span></p>
-                    <p><span style="font-size: 7vh;">I am a ^80 <strong style="color: #00adb5;">Software Engineer</strong>.</span></p>
+                    <strong style="color: #00adb5; font-size: 5vh;">Tyler Villa</strong><span style="font-size: 5vh;"><br>
+                      and i'm a <strong style="color: #00adb5; font-size: 5vh;">Software Engineer.</strong>
+                      
+                    </span>
+        
                 </div>
                 <span id="typed"></span>
               </div>
@@ -52,7 +48,7 @@
               <div id="skills-container2" >
 
                 <div class="skill" id="django" style="margin: 0 15px 0 15px">
-                    <img src="https://cdn.freebiesupply.com/logos/large/2x/django-logo-png-transparent.png" alt="Django Logo" class="Skills-logos">
+                    <img src="https://gitlab.com/uploads/-/system/project/avatar/3692106/django.png" alt="Django Logo" class="Skills-logos">
                     <h3>Django</h3>
                 </div>
 
@@ -72,9 +68,38 @@
               ></i></button></a>
             </div>
             </div>
+
+      <div class="main-2">
+        <div class="prj-header"></div>
+        <h3>SOME OF MY LASTEST WORK</h3>
+        <div class="container-portfolio-home">
+            <% projects.map(p => { %>
+            <div class="box" id="<%= p.id %>">
+              <div class="content">
+                <h2><img class="project-cover" src="<%= p.imgUrl %>" /></h2>
+                <h1 id="<%= p.id %>"><%= p.name %></h1>
+                <hr />
+                <p>
+                  <%= p.description %>
+                </p>
+                <ul class="tech-list">
+                  <% p.technology.forEach(t => { %>
+                  <li class="tech-list-item">
+                    <img class="tech-img" id="t.id" src="<%= t.techImgUrl%>" /><%=
+                    t.name %>
+                  </li>
+                  <% }) %>
+                </ul>
+                <div class="icons">
+                  <a href=""><i class="fa fa-github w3-xxlarge icon-white"></i></a>
+                  <a href=""><i class="fa fa-external-link w3-xxlarge"></i></a>
+                </div>
+              </div>
+            </div>
+            <% }) %>
+          </div>
       </div>
-    </div>
-    <div id="projects">projects</div>
+
     <script type="text/javascript">
       var typed = new Typed("#typed", {
         stringsElement: "#typed-strings",
