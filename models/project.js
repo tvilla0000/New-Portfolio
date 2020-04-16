@@ -41,7 +41,7 @@ let projects = [
     ],
     description:
       "Tasty is a project that integrates the use of Django with Python to create an app alike to Yelp that implements class based views! ",
-    imgUrl: "https://i.imgur.com/yAn25C6.png"
+    imgUrl: "https://i.imgur.com/TgFOa5V.png"
   },
   {
     name: "1920 Barbers",
