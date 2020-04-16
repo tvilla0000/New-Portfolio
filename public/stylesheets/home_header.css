@@ -16,7 +16,7 @@ i {
   transition: 0.75s;
 }
 nav {
-  border-bottom: 0.5px solid #00adb5;
+  border-bottom: 0.5px solid#04f2ff;
 }
 
 /*--- Navbar/Header ---*/
@@ -46,7 +46,6 @@ nav {
   width: 4vw;
   height: 8vh;
   margin-top: -4px;
-  z-index: -1;
 }
 
 .links {
@@ -386,18 +385,19 @@ nav {
   background: black;
 }
 
-.container-portfolio-home {
+/* .container-portfolio-frontend .box {
   position: relative;
-  margin-top: 4vh;
-  width: 90%;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 0.5fr));
-  grid-template-rows: auto;
-  grid-gap: 0 40px;
-  margin-bottom: 5vh;
+  height: 400px;
+  background: #060c21;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  transition: 0.75s ease-out;
+  margin-bottom: 20px;
+  border-radius: 5px;
 }
-
-.container-portfolio-home .box {
+.container-portfolio .box {
   position: relative;
   height: 400px;
   background: #0a0a0a;
@@ -410,20 +410,19 @@ nav {
   border-radius: 5px;
 }
 
-.container-portfolio-home .box:hover:before {
+.container-portfolio .box:hover:before {
   content: "";
   position: absolute;
   top: -2px;
   left: -2px;
   right: -2px;
   bottom: -2px;
-  background: #00adb5;
   animation: skew 2s;
   animation-fill-mode: forwards;
   z-index: -1;
 }
 
-.container-portfolio-home .box::after {
+.container-portfolio .box::after {
   content: "";
   position: absolute;
   top: 0;
@@ -432,7 +431,7 @@ nav {
   height: 100%;
   background: rgba(74, 171, 179, 0.05);
   z-index: 0;
-}
+} */
 
 #supe::before {
   background: linear-gradient(315deg, #89ff00, #00bcd4);
@@ -586,14 +585,5 @@ nav {
 @keyframes textclip {
   to {
     background-position: 200% center;
-  }
-}
-
-@keyframes skew {
-  0% {
-    transform: skew(0deg);
-  }
-  100% {
-    transform: skew(1.5deg, 1.5deg);
   }
 }
