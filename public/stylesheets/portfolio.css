@@ -21,14 +21,14 @@ body {
 .header-projects {
   margin-top: 15vh;
   height: 1px;
-  border-bottom: #00adb5 solid 1px;
+  border-bottom: #04f2ff solid 1px;
   margin-bottom: 20px;
   width: 90%;
 }
 
 .header-frontend {
   height: 1px;
-  border-bottom: #00adb5 solid 1px;
+  border-bottom: #04f2ff solid 1px;
   margin-bottom: 20px;
   width: 90%;
 }
@@ -40,12 +40,12 @@ body {
   background: black;
   width: 26vw;
   text-align: center;
-  color: #00adb5;
+  color: #04f2ff;
 }
 
 .header-fullstack {
   height: 1px;
-  border-bottom: #00adb5 solid 1px;
+  border-bottom: #04f2ff solid 1px;
   margin-bottom: 20px;
   width: 90%;
 }
@@ -57,12 +57,12 @@ body {
   background: black;
   width: 26vw;
   text-align: center;
-  color: #00adb5;
+  color: #04f2ff;
 }
 
 .header-backend {
   height: 1px;
-  border-bottom: #00adb5 solid 1px;
+  border-bottom: #04f2ff solid 1px;
   margin-bottom: 20px;
   width: 90%;
 }
@@ -74,14 +74,14 @@ body {
   background: black;
   width: 26vw;
   text-align: center;
-  color: #00adb5;
+  color: #04f2ff;
 }
 
 .header-projects h1 {
   position: absolute;
   top: 85px;
   text-align: center;
-  color: #00adb5;
+  color: #04f2ff;
   left: 41%;
   width: 18vw;
   background: black;
@@ -232,6 +232,12 @@ body {
   border-color: black;
 }
 
+#barbers .icons a:hover {
+  background: linear-gradient(315deg, #2bfd9b, #265df5);
+
+  border-color: black;
+}
+
 .icons a:hover i {
   color: black;
 }
@@ -297,6 +303,13 @@ body {
   color: #285aeb;
 }
 
+#barbers:hover h1 {
+  animation: slideLeftBarbers 1s;
+  animation-fill-mode: forwards;
+  transition: 0.75s;
+  color: #2bfd9b;
+}
+
 #westream h1 {
   animation: slideLeftBackwardsWeStream 1s;
 }
@@ -315,6 +328,10 @@ body {
 
 #supe h1 {
   animation: slideLeftBackwardsSupe 1s;
+}
+
+#barbers h1 {
+  animation: slideLeftBackwardsBarbers 1s;
 }
 
 #westream::before {
@@ -339,6 +356,10 @@ body {
 
 #barbers::before {
   background: linear-gradient(315deg, #285aeb, #fd5949);
+}
+
+#barbers::before {
+  background: linear-gradient(315deg, #2bfd9b, #265df5);
 }
 
 .tech-list-item {
@@ -466,6 +487,15 @@ body {
     transform: translateX(-42px);
   }
 }
+
+@keyframes slideLeftBarbers {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-15px);
+  }
+}
 @keyframes slideLeftPokedex {
   0% {
     transform: translateX(0);
@@ -511,6 +541,15 @@ body {
 @keyframes slideLeftBackwardsSupe {
   0% {
     transform: translateX(-48px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes slideLeftBackwardsBarbers {
+  0% {
+    transform: translateX(-15px);
   }
   100% {
     transform: translateX(0px);
