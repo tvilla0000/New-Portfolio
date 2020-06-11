@@ -154,10 +154,6 @@ body {
   transition: 0.5s ease-in-out;
 }
 
-.box:hover .box {
-  backdrop-filter: blur(4px);
-}
-
 .content h1 {
   padding: 0;
   font-size: 40px;
@@ -405,8 +401,12 @@ body {
 .box:hover .project-cover {
   visibility: visible;
   opacity: 0.3;
-  transform: translateY(25px);
+  transform: translateY(4px);
   transition: 1.5s;
+}
+
+#barbers .project-cover {
+  margin-top: 9px;
 }
 
 #node-master .tech-list {
