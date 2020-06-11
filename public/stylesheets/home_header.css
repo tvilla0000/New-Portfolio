@@ -31,10 +31,10 @@ nav {
   margin-right: 50px;
 }
 
-#div-url-links > .div-url-links:hover {
-  transition: 0.5s;
-  animation: bop_links 1s linear infinite;
-}
+/* #div-url-links > .div-url-links:hover .top-border {
+  animation: topBorder 0.75s;
+  animation-fill-mode: forwards;
+} */
 
 #logo {
   width: 4.5vw;
@@ -56,23 +56,61 @@ nav {
 
 .url-links {
   margin: 0 10px;
-  color: rgb(198, 198, 198);
+  color: rgb(124, 124, 124);
+  padding: 10px;
+  font-size: 15px;
 }
 
-.url-links:hover {
+.top-border {
+  height: 2px;
+  background: #04f2ff;
+  position: absolute;
+}
+
+#div-url-links > .div-url-links:hover .url-links {
   text-decoration: none;
   color: white;
+  transition: 1s;
 }
 
-.links:hover {
+/* .links:hover {
   color: white;
   transition: 0.5s;
   animation: bop_links 1s linear infinite;
-}
+} */
 
 .div-url-links {
   display: flex;
   flex-direction: column;
+  position: relative;
+  margin: 0 15px;
+}
+
+.div-url-links::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  background: #04f2ff;
+  top: 0;
+  height: 0.5px;
+  left: 0;
+  transition: all 0.75s;
+}
+
+.div-url-links::after {
+  content: "";
+  position: absolute;
+  background: #04f2ff;
+  width: 0;
+  height: 0.5px;
+  right: 0;
+  bottom: 0;
+  transition: all 0.75s;
+}
+
+.div-url-links:hover::before,
+.div-url-links:hover::after {
+  width: 100%;
 }
 
 /*--- Main content ---*/
@@ -286,10 +324,10 @@ nav {
 }
 
 #to-portfolio {
-  border: 2px solid #00adb5;
+  border: 2px solid #04f2ff;
   width: 12vw;
   height: 8vh;
-  color: #00adb5;
+  color: #04f2ff;
   border-radius: 5px;
   background: rgba(0, 0, 0, 0);
   transition: 0.75s ease-out;
@@ -328,8 +366,8 @@ nav {
 }
 
 .skill:hover {
-  transform: scale(1.5);
-  transition: 0.75s ease-in;
+  transform: scale(1.25);
+  transition: 0.5s ease-in-out;
 }
 
 .skill {
@@ -362,7 +400,7 @@ nav {
 .main-2 {
   width: 100%;
   height: 88vh;
-  border: 2px solid black;
+  /* border: 2px solid white; */
   display: flex;
   background: black;
   position: relative;
@@ -370,7 +408,7 @@ nav {
 }
 
 .prj-header {
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid #04f2ff;
   width: 80vw;
   position: absolute;
   top: 3.5%;
@@ -385,23 +423,27 @@ nav {
   background: black;
 }
 
-/* .container-portfolio-frontend .box {
+.container-portfolio-home {
+  /* border: 2px solid white; */
   position: relative;
-  height: 400px;
-  background: #060c21;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid black;
-  transition: 0.75s ease-out;
-  margin-bottom: 20px;
-  border-radius: 5px;
+  padding: 0 0 0 150px;
+  height: 65vh;
+  margin-top: 20vh;
+  margin-left: 1vw;
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 0.5fr));
+  /* grid-template-rows: auto; */
+  grid-gap: 0 50px;
+  /* margin-bottom: 5vh; */
 }
-.container-portfolio .box {
+
+.container-portfolio-home .box {
   position: relative;
   height: 400px;
   background: #0a0a0a;
   display: flex;
+  width: 300px;
   justify-content: center;
   align-items: center;
   border: 1px solid black;
@@ -410,19 +452,7 @@ nav {
   border-radius: 5px;
 }
 
-.container-portfolio .box:hover:before {
-  content: "";
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  animation: skew 2s;
-  animation-fill-mode: forwards;
-  z-index: -1;
-}
-
-.container-portfolio .box::after {
+.container-portfolio-home .box::after {
   content: "";
   position: absolute;
   top: 0;
@@ -431,10 +461,6 @@ nav {
   height: 100%;
   background: rgba(74, 171, 179, 0.05);
   z-index: 0;
-} */
-
-#supe::before {
-  background: linear-gradient(315deg, #89ff00, #00bcd4);
 }
 
 /*--- Animations ---*/
@@ -585,5 +611,15 @@ nav {
 @keyframes textclip {
   to {
     background-position: 200% center;
+  }
+}
+
+@keyframes topBorder {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 127.03px;
   }
 }
