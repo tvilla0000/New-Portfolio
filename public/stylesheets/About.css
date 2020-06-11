@@ -1,52 +1,316 @@
 /*--- Direct Element Changes ---*/
-.main {
+.section {
   margin: 12vh 12.5% 0 12.5%;
   height: 88vh;
   width: 75%;
-  border: 2px solid white;
+  /* border: 2px solid white; */
   display: flex;
   flex-direction: column;
 }
 
+.section2 {
+  margin: 2vh 12.5% 0 10%;
+  width: 80%;
+  height: 75vh;
+  border: 1px solid white;
+  display: flex;
+}
+
+.section3 {
+  margin: 2vh 12.5% 0 10%;
+  width: 80%;
+  height: 75vh;
+  border: 1px solid white;
+}
+
 .poster {
-  border: 2px solid white;
+  /* border: 2px solid white; */
   height: 80%;
   width: 100%;
   display: flex;
 }
 
+.about-footer {
+  border: 2px solid gray;
+  height: 15vh;
+}
+
+.cartoon-sec {
+  border: 1px solid white;
+  width: 50%;
+  height: 100%;
+}
+
+.cartoon-wrap {
+  border: 1px solid white;
+  width: 450px;
+  height: 450px;
+  margin: 0 auto;
+  margin-top: 60px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  background: white;
+}
+
+.cartoon-body {
+  position: absolute;
+  height: 40vh;
+  width: 20vw;
+  background: rgb(31, 31, 31);
+  left: 18%;
+  top: 250px;
+  border-radius: 80px;
+}
+
+.cartoon-head {
+  position: absolute;
+  width: 14vw;
+  height: 32vh;
+  left: 27.5%;
+  top: 80px;
+  background: rgb(235, 195, 135);
+  border-radius: 100px;
+  animation: head-tilt 3s 2s, headTiltBack 2s 10s, headTiltLeft 3s 20s,
+    headTiltBackLeft 2s 40s;
+  animation-fill-mode: forwards;
+}
+
+.background {
+  width: 50%;
+  height: 100%;
+}
+
+.header {
+  width: 100%;
+  height: 18%;
+  border: 1px solid white;
+}
+
+.header h1 {
+  text-align: right;
+  font-size: 45px;
+  margin-top: 18px;
+  color: rgba(255, 255, 255, 0.801);
+}
+
+.emphasize {
+  color: #04f2ff;
+  font-size: 55px;
+}
+
+.background-info {
+  height: 82%;
+  width: 100%;
+  border: 1px solid white;
+}
+
+.background-info p {
+  font-size: 25px;
+  line-height: 45px;
+  padding: 10px;
+  text-align: right;
+}
+
+.cartoon-face {
+  position: absolute;
+  position: relative;
+  width: 13vw;
+  height: 22vh;
+  background: rgb(235, 195, 135);
+  left: 7px;
+  top: 15px;
+  border-radius: 35px;
+}
+
+.cartoon-ear {
+  position: absolute;
+  width: 12px;
+  height: 25px;
+  background: rgb(235, 195, 135);
+}
+
+#left-ear {
+  left: -14px;
+  top: 113.25px;
+  border-bottom-left-radius: 10px;
+}
+
+#right-ear {
+  right: -15px;
+  top: 113.25px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 1px;
+}
+
+.cartoon-hair {
+  position: absolute;
+  top: -30px;
+  right: -15px;
+  width: 16vw;
+  height: 22vh;
+  border-top-left-radius: 45px;
+  border-top-right-radius: 45px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  background: black;
+}
+
+.cartoon-eyebrow {
+  position: absolute;
+  width: 3.75vw;
+  height: 2vh;
+  background: black;
+  animation: eyebrow-raise 2s 6.6s infinite alternate ease-in-out;
+}
+
+#left-eyebrow {
+  left: 20px;
+  top: 40px;
+}
+
+#right-eyebrow {
+  right: 20px;
+  top: 40px;
+  transform: rotate(6deg);
+  /* transform: rotate(6deg); */
+}
+
+.cartoon-hairline {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: black;
+  z-index: 1;
+}
+
+#left-hairline {
+  left: 2px;
+  top: 40px;
+  border-bottom-right-radius: 6px;
+}
+
+#right-hairline {
+  right: 2px;
+  top: 40px;
+  border-bottom-left-radius: 4px;
+}
+
+.cartoon-eye {
+  position: absolute;
+  width: 22px;
+  height: 38px;
+  background: rgb(167, 127, 97);
+  animation: blink 3s 2.2s infinite linear;
+  animation-fill-mode: forwards;
+}
+
+#left-eye {
+  left: 38px;
+  top: 65px;
+  border-radius: 65px;
+}
+
+#right-eye {
+  right: 38px;
+  top: 65px;
+  border-radius: 65px;
+}
+
+.cartoon-eyeshadow {
+  position: absolute;
+  height: 15px;
+  width: 30px;
+  border-radius: 0 0 90px 90px;
+  background: rgba(3, 3, 3, 0.103);
+  z-index: 0;
+}
+
+#left-eyeshadow {
+  top: 94px;
+  left: 34px;
+}
+
+#right-eyeshadow {
+  top: 94px;
+  right: 34px;
+}
+
+.cartoon-smile {
+  position: absolute;
+  height: 35px;
+  width: 80px;
+  border-radius: 0 0 90px 90px;
+  background: rgb(255, 255, 255);
+  left: 29%;
+  top: 100%;
+  display: flex;
+  overflow: hidden;
+}
+
+.cartoon-teeth {
+  height: 100%;
+  width: 25%;
+  border-right: 0.5px solid black;
+}
+
+.cartoon-nose {
+  position: absolute;
+  height: 35px;
+  width: 35px;
+  border-radius: 90px 90px 0 0;
+  background: rgb(235, 195, 135);
+  left: 41%;
+  top: 64%;
+  z-index: 2;
+}
+
+.cartoon-headshadow {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background: rgba(3, 3, 3, 0.062);
+  left: 0px;
+  z-index: 2;
+  border-bottom-left-radius: 100px;
+  /* border-bottom-right-radius: 80px; */
+}
+
 .info {
-  border: 1px dotted white;
+  /* border: 1px dotted white; */
   width: 50%;
   padding: 40px 20px 0 20px;
-  animation: fadeInAndSlideRight 2s;
+  animation: fadeInAndSlideRight 2.75s ease;
 }
 
 .info-header {
-  font-size: 70px;
+  font-size: 55px;
   font-weight: 800;
   color: #04f2ff;
 }
 
 .intro {
   font-size: 32px;
-  margin: 40px 0 0 0;
-  color: rgb(126, 126, 126);
+  margin: 20px 0 0 0;
+  color: rgb(194, 192, 192);
   font-weight: 100;
 }
 
 .abt-description {
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 500;
   margin-top: 35px;
+  line-height: 45px;
 }
 
 .headshot-div {
   width: 50%;
+  margin-top: 10px;
+  margin-left: 40px;
 }
 
 .color-span {
-  color: #04f2ff;
+  color: #03cfda;
   font-size: 28px;
   font-weight: 800;
 }
@@ -55,8 +319,8 @@
   width: 24vw;
   height: 100%;
   margin-left: 90px;
-  border-radius: 10px;
-  animation: fadeInAndSlideLeft 2s;
+  border-radius: 5px;
+  animation: fadeInAndSlideLeft 2.75s ease;
 }
 
 .medias {
@@ -79,10 +343,10 @@
   color: #2867b2;
   transform: scale(1.25);
 }
-/* 
-#sf {
-  font-weight: 800;
-} */
+
+.section-divide {
+  border: 1px solid rgb(85, 85, 85);
+}
 
 #linkedin::before {
   content: "";
@@ -247,5 +511,87 @@
   100% {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@keyframes blink {
+  0% {
+    transform: scaleY(1) translateY(0px) translateZ(0);
+  }
+  45% {
+    transform: scaleY(1) translateY(0px) translateZ(0);
+  }
+  50% {
+    transform: scaleY(0.1) translateZ(0);
+  }
+  55% {
+    transform: scaleY(1) translateY(0px) translateZ(0);
+  }
+  100% {
+    transform: scaleY(1) translateY(0px) translateZ(0);
+  }
+}
+
+@keyframes grow {
+  0% {
+    position: absolute;
+
+    transform: scale(0) translateZ(0);
+  }
+  60% {
+    transform: scale(1.15) translateZ(0);
+  }
+  80% {
+    transform: scale(0.95) translateZ(0);
+  }
+  100% {
+    transform: scale(1) translateZ(0);
+  }
+}
+
+@keyframes eyebrow-raise {
+  0% {
+    top: 35px;
+  }
+  80% {
+    top: 35px;
+  }
+  100% {
+    top: 40px;
+  }
+}
+
+@keyframes head-tilt {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(8deg);
+  }
+}
+
+@keyframes headTiltBack {
+  0% {
+    transform: rotate(8deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes headTiltBackLeft {
+  0% {
+    transform: rotate(-8deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes headTiltLeft {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(-8deg);
   }
 }
