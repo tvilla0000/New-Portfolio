@@ -64,8 +64,8 @@ let projects = [
       }
     ],
     description:
-      "Tasty is a project that integrates the use of Django with Python to create an app alike to Yelp that implements class based views! ",
-    imgUrl: "https://i.imgur.com/yAn25C6.png"
+      "1920 Barbers is a site created for the 1920 Barbershop in Concord, CA. The site makes it more convenient for clients to set up appointments",
+    imgUrl: "https://i.imgur.com/W69pXVu.png"
   },
   {
     name: "WeStream",
@@ -158,7 +158,6 @@ const getAll = () => {
 };
 
 // Filter out projects based on type
-
 const isFrontend = projects.filter(x => {
   return x.type === "Frontend" || x.type === "Frontend & Backend";
 });
