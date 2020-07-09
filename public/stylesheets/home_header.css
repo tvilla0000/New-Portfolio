@@ -22,7 +22,7 @@ nav {
 /*--- Navbar/Header ---*/
 
 #nav {
-  background-color: rgb(17, 17, 17);
+  background-color: rgb(19, 19, 19);
   height: 12vh;
   animation: 1s ease-out 0s 1 slideInFromTop;
 }
@@ -30,11 +30,6 @@ nav {
 #div-url-links {
   margin-right: 50px;
 }
-
-/* #div-url-links > .div-url-links:hover .top-border {
-  animation: topBorder 0.75s;
-  animation-fill-mode: forwards;
-} */
 
 #logo {
   width: 4.5vw;
@@ -59,6 +54,7 @@ nav {
   color: rgb(124, 124, 124);
   padding: 10px;
   font-size: 15px;
+  transition: 1s;
 }
 
 .top-border {
@@ -69,15 +65,9 @@ nav {
 
 #div-url-links > .div-url-links:hover .url-links {
   text-decoration: none;
-  color: white;
+  color: #04f2ff;
   transition: 1s;
 }
-
-/* .links:hover {
-  color: white;
-  transition: 0.5s;
-  animation: bop_links 1s linear infinite;
-} */
 
 .div-url-links {
   display: flex;
@@ -94,7 +84,7 @@ nav {
   top: 0;
   height: 0.5px;
   left: 0;
-  transition: all 0.75s;
+  transition: all 0.5s;
 }
 
 .div-url-links::after {
@@ -105,7 +95,7 @@ nav {
   height: 0.5px;
   right: 0;
   bottom: 0;
-  transition: all 0.75s;
+  transition: all 0.5s;
 }
 
 .div-url-links:hover::before,
