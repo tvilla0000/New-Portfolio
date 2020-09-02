@@ -31,7 +31,8 @@ let projects = [
     technology: [
       {
         name: "React",
-        techImgUrl: "http://maxehnert.com/app/images/react.svg"
+        techImgUrl:
+          "https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png"
       },
       {
         name: "Javascript",
@@ -74,8 +75,8 @@ let projects = [
     technology: [
       {
         name: "React",
-        id: "react-logo",
-        techImgUrl: "http://maxehnert.com/app/images/react.svg"
+        techImgUrl:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png"
       },
       {
         name: "Node",
