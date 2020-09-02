@@ -22,9 +22,10 @@ nav {
 /*--- Navbar/Header ---*/
 
 #nav {
-  background-color: rgb(19, 19, 19);
+  background-color: rgb(24, 24, 24);
   height: 12vh;
   animation: 1s ease-out 0s 1 slideInFromTop;
+  position: absolute;
 }
 
 #div-url-links {
@@ -378,13 +379,74 @@ nav {
   animation: slideInFromLeft 1.5s;
 }
 .main {
-  width: 100%;
+  width: 80%;
   height: 88vh;
-  border: 2px solid black;
+  /* border: 2px solid white; */
   display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
   background: black;
   position: relative;
   margin-top: 12vh;
+  animation: 3.5s ease-out 0s 1 fadeIn;
+}
+
+.headshot {
+  width: 275px;
+  height: 275px;
+  border: 1px solid #04f2ff;
+  border-radius: 50%;
+  z-index: 1;
+  margin-bottom: -20px;
+  background: url(https://i.imgur.com/4gIMd92.jpg);
+  background-size: cover;
+}
+
+.title {
+  /* border: 1px solid white; */
+  height: 80px;
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+.bio {
+  border-top: 1px solid #04f2ff;
+  border-bottom: 1px solid #04f2ff;
+  width: 140%;
+  height: 35%;
+  z-index: 0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: rgb(24, 24, 24);
+}
+
+.color-span {
+  color: #04f2ff;
+  font-size: 28px;
+}
+
+.typed-title {
+  border-bottom: 0.5px solid #04f2ff;
+  width: 95%;
+  height: 80%;
+  margin: 8px 30px;
+  text-align: left;
+  padding: 0 0 0 80px;
+}
+
+.typed-cursor {
+  font-size: 50px;
+}
+
+.bio > .container > p {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 25px;
+  padding: 10px;
+  line-height: 35px;
 }
 
 .main-2 {
@@ -611,5 +673,14 @@ nav {
 
   100% {
     width: 127.03px;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
