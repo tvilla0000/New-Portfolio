@@ -1,106 +1,97 @@
-body {
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.main {
+  width: 80%;
   height: 100%;
+  margin: 16vh 10vw 10vh 10vw;
+  position: relative;
+  animation: 3.5s ease-out 0s 1 fadeIn;
+}
+
+.header {
+  border-bottom: 1px solid white;
+  text-align: center;
+  width: 50%;
+  margin-bottom: 4vh;
+}
+
+.header h1 {
+  font-size: 50px;
+  color: #04f2ff;
 }
 
 .container-portfolio {
+  padding: 20px;
   position: relative;
-  margin-top: 4vh;
   width: 90%;
+  height: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 0.5fr));
+  grid-template-columns: 300px 300px 300px;
   grid-template-rows: auto;
   grid-gap: 0 40px;
-  margin-bottom: 5vh;
 }
 
-.header-projects {
-  margin-top: 15vh;
-  height: 1px;
-  border-bottom: #04f2ff solid 1px;
-  margin-bottom: 20px;
-  width: 90%;
+.box:hover #skills-top-border {
+  width: 100%;
+  transition: 0.75s;
 }
 
-.header-frontend {
-  height: 1px;
-  border-bottom: #04f2ff solid 1px;
-  margin-bottom: 20px;
-  width: 90%;
+.box:hover #skills-left-border {
+  height: 100%;
+  transition: 0.75s;
 }
 
-.header-frontend h1 {
+.box:hover #skills-right-border {
+  height: 100%;
+  transition: 0.75s;
+}
+
+.box:hover #skills-bottom-border {
+  transition: 0.75s;
+  width: 100%;
+}
+
+#skills-top-border {
   position: absolute;
-  top: 70.25vw;
-  left: 38%;
-  background: black;
-  width: 26vw;
-  text-align: center;
-  color: #04f2ff;
+  height: 2px;
+  width: 0;
+  left: 0;
+  top: 0;
+  background: #04f2ff;
+  transition: 0.75s;
 }
 
-.header-fullstack {
-  height: 1px;
-  border-bottom: #04f2ff solid 1px;
-  margin-bottom: 20px;
-  width: 90%;
-}
-
-.header-fullstack h1 {
+#skills-left-border {
   position: absolute;
-  top: 170vw;
-  left: 38%;
-  background: black;
-  width: 26vw;
-  text-align: center;
-  color: #04f2ff;
+  height: 0;
+  width: 2px;
+  top: 0;
+  left: 0;
+  background: #04f2ff;
+  transition: 0.75s;
 }
 
-.header-backend {
-  height: 1px;
-  border-bottom: #04f2ff solid 1px;
-  margin-bottom: 20px;
-  width: 90%;
-}
-
-.header-backend h1 {
+#skills-right-border {
   position: absolute;
-  top: 134.75vw;
-  left: 37.75%;
-  background: black;
-  width: 26vw;
-  text-align: center;
-  color: #04f2ff;
+  height: 0;
+  width: 2px;
+  bottom: 0;
+  right: 0;
+  background: #04f2ff;
+  transition: 0.75s;
 }
 
-.header-projects h1 {
+#skills-bottom-border {
   position: absolute;
-  top: 85px;
-  text-align: center;
-  color: #04f2ff;
-  left: 41%;
-  width: 18vw;
-  background: black;
+  height: 2px;
+  width: 0;
+  right: 0;
+  bottom: 0;
+  background: #04f2ff;
+  transition: 0.75s;
 }
 
-.container-portfolio-frontend .box {
-  position: relative;
-  height: 400px;
-  background: #060c21;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid black;
-  transition: 0.75s ease-out;
-  margin-bottom: 20px;
-  border-radius: 5px;
-}
 .container-portfolio .box {
   position: relative;
+  width: 300px;
   height: 400px;
   background: #0a0a0a;
   display: flex;
@@ -109,19 +100,8 @@ body {
   border: 1px solid black;
   transition: 0.75s ease-out;
   margin-bottom: 20px;
-  border-radius: 5px;
-}
-
-.container-portfolio .box:hover:before {
-  content: "";
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  animation: skew 2s;
-  animation-fill-mode: forwards;
-  z-index: -1;
+  overflow: hidden;
+  z-index: 1;
 }
 
 .container-portfolio .box::after {
@@ -143,6 +123,7 @@ body {
 
 .content h2 {
   position: absolute;
+  top: -120px;
   margin: 0;
   padding: 0;
   color: rgba(255, 255, 255, 0.05);
@@ -150,7 +131,6 @@ body {
 }
 
 .box:hover .content h2 {
-  top: -120px;
   transition: 0.5s ease-in-out;
 }
 
@@ -258,10 +238,6 @@ body {
   z-index: 1;
 }
 
-#tasty::before {
-  background: linear-gradient(315deg, #ff0057, #e64a19);
-}
-
 #tasty:hover h1 {
   animation: slideLeft 1s;
   animation-fill-mode: forwards;
@@ -306,6 +282,86 @@ body {
   color: #2bfd9b;
 }
 
+#tasty #skills-left-border {
+  background: #e64a19;
+}
+
+#tasty #skills-top-border {
+  background: #e64a19;
+}
+
+#tasty #skills-right-border {
+  background: #ff0057;
+}
+
+#tasty #skills-bottom-border {
+  background: #ff0057;
+}
+
+#supe #skills-left-border {
+  background: #fd5949;
+}
+
+#supe #skills-top-border {
+  background: #fd5949;
+}
+
+#supe #skills-right-border {
+  background: #285aeb;
+}
+
+#supe #skills-bottom-border {
+  background: #285aeb;
+}
+
+#westream #skills-left-border {
+  background: #5d02ff;
+}
+
+#westream #skills-top-border {
+  background: #5d02ff;
+}
+
+#westream #skills-right-border {
+  background: #e91e63;
+}
+
+#westream #skills-bottom-border {
+  background: #e91e63;
+}
+
+#django-blog #skills-left-border {
+  background: #00bcd4;
+}
+
+#django-blog #skills-top-border {
+  background: #00bcd4;
+}
+
+#django-blog #skills-right-border {
+  background: #89ff00;
+}
+
+#django-blog #skills-bottom-border {
+  background: #89ff00;
+}
+
+#node-master #skills-left-border {
+  background: #ffc107;
+}
+
+#node-master #skills-top-border {
+  background: #ffc107;
+}
+
+#node-master #skills-right-border {
+  background: #ff0000;
+}
+
+#node-master #skills-bottom-border {
+  background: #ff0000;
+}
+
 #westream h1 {
   animation: slideLeftBackwardsWeStream 1s;
 }
@@ -328,34 +384,6 @@ body {
 
 #barbers h1 {
   animation: slideLeftBackwardsBarbers 1s;
-}
-
-#westream::before {
-  background: linear-gradient(315deg, #e91e63, #5d02ff);
-}
-
-#pokedex::before {
-  background: linear-gradient(315deg, #ffcb05, #3d7dca);
-}
-
-#django-blog::before {
-  background: linear-gradient(315deg, #89ff00, #00bcd4);
-}
-
-#node-master::before {
-  background: linear-gradient(315deg, #ff0000, #ffc107);
-}
-
-#supe::before {
-  background: linear-gradient(315deg, #285aeb, #fd5949);
-}
-
-#barbers::before {
-  background: linear-gradient(315deg, #285aeb, #fd5949);
-}
-
-#barbers::before {
-  background: linear-gradient(315deg, #2bfd9b, #265df5);
 }
 
 .tech-list-item {
@@ -390,19 +418,18 @@ body {
 .project-cover {
   width: 106%;
   height: 220px;
-  transition: 1.5s;
+  transition: 1s;
   visibility: hidden;
   opacity: 0;
-  transform: translateY(50px);
+  transform: translateY(60px);
   margin-left: -18px;
-  border-radius: 5px;
 }
 
 .box:hover .project-cover {
   visibility: visible;
   opacity: 0.3;
-  transform: translateY(4px);
-  transition: 1.5s;
+  transform: translateY(3px);
+  transition: 1s;
 }
 
 #barbers .project-cover {
@@ -460,7 +487,7 @@ body {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-85px);
+    transform: translateX(-75px);
   }
 }
 @keyframes slideLeftWeStream {
@@ -515,7 +542,7 @@ body {
 
 @keyframes slideLeftBackwards {
   0% {
-    transform: translateX(-85px);
+    transform: translateX(-75px);
   }
   100% {
     transform: translateX(0);
@@ -540,7 +567,7 @@ body {
 
 @keyframes slideLeftBackwardsSupe {
   0% {
-    transform: translateX(-48px);
+    transform: translateX(-42px);
   }
   100% {
     transform: translateX(0px);
