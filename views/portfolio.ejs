@@ -1,52 +1,48 @@
 <%- include('./partials/header.ejs') %>
 <head>
   <link rel="stylesheet" href="/stylesheets/portfolio.css" />
-  <script
-    src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-    crossorigin="anonymous"
-  ></script>
-  <script
-    type="text/javascript"
-    rel="javascript"
-    src="/javascripts/filterProjects.js"
-  ></script>
 </head>
 <body>
-  <div class="header-projects">
+  <!-- <div class="header-projects">
     <h1>All Projects</h1>
-  </div>
-
-  <div class="container-portfolio">
-    <% projects.map(p => { %>
-    <div class="box" id="<%= p.id %>">
-      <div class="content">
-        <h2 style="margin-top: 25px">
-          <img class="project-cover" src="<%= p.imgUrl %>" />
-        </h2>
-        <h1 id="<%= p.id %>"><%= p.name %></h1>
-        <hr />
-        <p>
-          <%= p.description %>
-        </p>
-        <ul class="tech-list">
-          <% p.technology.forEach(t => { %>
-          <li class="tech-list-item">
-            <img class="tech-img" id="t.id" src="<%= t.techImgUrl%>" /><%=
-            t.name %>
-          </li>
-          <% }) %>
-        </ul>
-        <div class="icons">
-          <a href=""><i class="fa fa-github w3-xxlarge icon-white"></i></a>
-          <a href=""><i class="fa fa-external-link w3-xxlarge"></i></a>
+  </div> -->
+  <div class="main">
+    <div class="header"><h1>My Work</h1></div>
+    <div class="container-portfolio">
+      <% projects.map(p => { %>
+      <div class="box" id="<%= p.id %>">
+        <div id="skills-top-border"></div>
+        <div id="skills-right-border"></div>
+        <div id="skills-left-border"></div>
+        <div id="skills-bottom-border"></div>
+        <div class="content">
+          <h2 style="margin-top: 25px">
+            <img class="project-cover" src="<%= p.imgUrl %>" />
+          </h2>
+          <h1 id="<%= p.id %>"><%= p.name %></h1>
+          <hr />
+          <p>
+            <%= p.description %>
+          </p>
+          <ul class="tech-list">
+            <% p.technology.forEach(t => { %>
+            <li class="tech-list-item">
+              <img class="tech-img" id="t.id" src="<%= t.techImgUrl%>" /><%=
+              t.name %>
+            </li>
+            <% }) %>
+          </ul>
+          <div class="icons">
+            <a href=""><i class="fa fa-github w3-xxlarge icon-white"></i></a>
+            <a href=""><i class="fa fa-external-link w3-xxlarge"></i></a>
+          </div>
         </div>
       </div>
+      <% }) %>
     </div>
-    <% }) %>
   </div>
 
-  <div class="header-frontend">
+  <!-- <div class="header-frontend">
     <h1>Frontend Projects</h1>
   </div>
   <div class="container-portfolio">
@@ -140,6 +136,6 @@
       </div>
     </div>
     <% }) %>
-  </div>
+  </div> -->
   <%- include('./partials/footer.ejs') %>
 </body>
