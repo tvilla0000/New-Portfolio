@@ -404,8 +404,6 @@ nav {
 }
 
 .title {
-  /* border: 1px solid white; */
-  height: 80px;
   width: 100%;
   margin-bottom: 60px;
 }
@@ -428,13 +426,30 @@ nav {
   font-size: 28px;
 }
 
+.home-project-cover {
+  width: 106%;
+  height: 220px;
+  transition: 1s;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(60px);
+  margin-left: -18px;
+}
+
+.box:hover .home-project-cover {
+  visibility: visible;
+  opacity: 0.3;
+  transform: translateY(29px);
+  transition: 1s;
+}
+
 .typed-title {
   border-bottom: 0.5px solid #04f2ff;
   width: 95%;
   height: 80%;
   margin: 8px 30px;
   text-align: left;
-  padding: 0 0 0 80px;
+  padding: 0 0 0 160px;
 }
 
 .typed-cursor {
