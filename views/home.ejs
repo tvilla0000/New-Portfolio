@@ -8,9 +8,9 @@
         <div class="title">
           <div class="typed-title">
               <div id="typed-strings">
-                <p><span style="font-size: 45px;"> Web Developer, Designer, Learner.</span></p>
-                <p><span style="font-size: 45px;"> Web Developer, Designer, ^1000Coder.</span></p>
-                <p><span style="font-size: 45px;"> Web Developer, Designer, ^1000 <span style="font-size: 45px; color: #04f2ff">Software Engineer</span>.</span></p>
+                <p><span style="font-size: 45px;"> Leader, Designer, Learner.</span></p>
+                <p><span style="font-size: 45px;"> Leader, Designer, ^1000Coder.</span></p>
+                <p><span style="font-size: 45px;"> Leader, Designer, ^1000 <span style="font-size: 45px; color: #04f2ff">Software Engineer</span>.</span></p>
             </div>
             <span id="typed"></span>
           </div>
@@ -95,8 +95,12 @@
         <div class="container-portfolio-home">
             <% projects.map(p => { %>
             <div class="box" id="<%= p.id %>">
+              <div id="skills-top-border"></div>
+              <div id="skills-right-border"></div>
+              <div id="skills-left-border"></div>
+              <div id="skills-bottom-border"></div>
               <div class="content">
-                <h2><img class="project-cover" src="<%= p.imgUrl %>" /></h2>
+                <h2><img class="home-project-cover" src="<%= p.imgUrl %>" /></h2>
                 <h1 id="<%= p.id %>"><%= p.name %></h1>
                 <hr />
                 <p>
